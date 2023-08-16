@@ -1,26 +1,30 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    import sys
-    from calculator_1 import add, sub, mul, div
+from sys import argv
+from calculator_1 import add, sub, mul, div
 
-    if len(sys.argv) != 4:
-        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        sys.exit(1)
+if (__name__ == "__main__"):
+    argc = len(argv)
+    result = 0
+    operators = ["+", "-", "*", "/"]
 
-        a = int(sys.argv[1])
-        operator = sys.argv[2]
-        b = int(sys.argv[3])
+    if (argc != 4):
+        print(f"Usage: {argv[0]} <a> <operator> <b>")
+        exit(1)
 
-        if operator == '+':
-            result = add(a, b)
-        elif operator == '-':
-            result = sub(a, b)
-        elif operator == '*':
-            result = mul(a, b)
-        elif operator == '/':
-            result = div(a, b)
-        else:
-            print("Unknown operator. Available operators: +, -, * and /")
-            sys.exit(1)
+    if (argv[2] not in operators):
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
 
-            print("{} {} {} = {}".format(a, operator, b, result))
+    num1 = int(argv[1])
+    operator = argv[2]
+    num2 = int(argv[3])
+
+    if (operator == "+"):
+        result = add(num1, num2)
+    elif (operator == "-"):
+        result = sub(num1, num2)
+    elif (operator == "*"):
+        result = mul(num1, num2)
+    else:
+        result = div(num1, num2)
+    print("{:d} {:s} {:d} = {:d}".format(num1, operator, num2, result))
