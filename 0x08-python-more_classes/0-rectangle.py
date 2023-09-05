@@ -2,6 +2,6 @@
 """This program create an empty Rectangle Class"""
 
 
-class Rectangle(object):
+class Rectangle:
     """Do nothing"""
     pass
