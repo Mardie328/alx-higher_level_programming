@@ -5,3 +5,4 @@
 class Rectangle:
     """Do nothing"""
     pass
+
