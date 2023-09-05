@@ -50,7 +50,7 @@ class Rectangle(object):
     def area(self):
         """Getter of the method area"""
         return self.width * self.height
-    
+
     def perimeter(self):
         """Getter of the method perimeter"""
         if (self.width == 0 or self.height == 0):

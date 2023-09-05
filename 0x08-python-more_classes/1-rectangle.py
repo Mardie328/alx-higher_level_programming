@@ -2,7 +2,7 @@
 """This program defines a Rectangle class with its attributes"""
 
 
-class Rectangle(object):
+class Rectangle():
     """This class defines a Rectangle"""
     def __init__(self, width=0, height=0):
         """Constructor function with a private instance attribute
