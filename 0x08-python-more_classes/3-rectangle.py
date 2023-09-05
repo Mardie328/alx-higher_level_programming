@@ -67,7 +67,3 @@ class Rectangle(object):
             rectangle_str += "#" * self.__width + "\n"
 
         return rectangle_str[:-1]
-<<<<<<< HEAD
-=======
-    
->>>>>>> be9ecf89656beb6e2fb58093c948b793bd27cc5b
