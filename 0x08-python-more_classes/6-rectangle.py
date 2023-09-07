@@ -1,15 +1,18 @@
 #!/usr/bin/python3
 """
-A Rectangle Class with the private instance attributes width, height
-, public methods and special methods
+A Rectangle Class with public class attributes, private instance attributes
+(width, height), public methods and special methods
 """
 
 
 class Rectangle():
     """
-    A Rectangle Class with the private instance attributes width, height,
-    public methods and special methods
+    A Rectangle Class with public class attributes,
+    private instance attributes width, height, public methods and
+    special methods.
     """
+
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """
@@ -20,6 +23,7 @@ class Rectangle():
         """
         self.height = height
         self.width = width
+        Rectangle.number_of_instances += 1
 
     def area(self):
         """Calculate the area of a Rectangle"""
@@ -47,6 +51,11 @@ class Rectangle():
     def __repr__(self):
         """Returns an “official” string representation of a Rectangle"""
         return f'Rectangle({self.__width}, {self.__height})'
+
+    def __del__(self):
+        """Prints a message when a Rectangle instance is deleted"""
+        print('Bye rectangle...')
+        Rectangle.number_of_instances -= 1
 
     @property
     def width(self):

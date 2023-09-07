@@ -48,6 +48,10 @@ class Rectangle():
         """Returns an “official” string representation of a Rectangle"""
         return f'Rectangle({self.__width}, {self.__height})'
 
+    def __del__(self):
+        """Prints a message when a Rectangle instance is deleted"""
+        print('Bye rectangle...')
+
     @property
     def width(self):
         """Getter of the property width"""
