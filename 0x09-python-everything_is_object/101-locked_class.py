@@ -10,3 +10,4 @@ class LockedClass():
     This class is Locked and you can only put the attribute first_name
     """
     __slots__ = ('first_name', )
+    
