@@ -17,7 +17,7 @@ class Node:
     def data(self):
         """Getter of the private attribute data"""
         return (self._data)
-    
+
     @data.setter
     def data(self, value):
         """Setter for the private attribute data"""
@@ -30,7 +30,7 @@ class Node:
     def next_node(self):
         """Getter for the next node"""
         return (self._next_node)
-    
+
     @next_node.setter
     def next_node(self, value):
         """Setter for the next node"""
@@ -38,9 +38,9 @@ class Node:
             self._next_node = value
         else:
             raise(TypeError("next_node must be a Node object or None"))
-
+    
 class SinglyLinkedList:
-    """ class SinglyLinkedList that defines a singly linked list """
+    """class SinglyLinkedList that defines a singly linked list"""
     def __init__(self):
         """Constructor function"""
         self._head = None
@@ -53,9 +53,10 @@ class SinglyLinkedList:
             new_node.next_node = self._head
             self._head = new_node
             return
-        
+  
         current = self._head
-        while (current.next_node is not None and current.next_node.data < value):
+        while (current.next_node is not None and \
+               current.next_node.data < value):
             current = current.next_node
 
         new_node.next_node = current.next_node
@@ -67,5 +68,4 @@ class SinglyLinkedList:
         while current:
             result.append(str(current.data))
             current = current.next_node
-        return '\n'.join(result)
-    
+            return '\n'.join(result)
