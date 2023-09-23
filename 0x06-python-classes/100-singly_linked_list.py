@@ -38,6 +38,7 @@ class Node:
             self._next_node = value
         else:
             raise(TypeError("next_node must be a Node object or None"))
+
 class SinglyLinkedList:
     """class SinglyLinkedList that defines a singly linked list"""
     def __init__(self):
@@ -52,10 +53,10 @@ class SinglyLinkedList:
             new_node.next_node = self._head
             self._head = new_node
             return
-  
+
         current = self._head
         while (current.next_node is not None and 
-               current.next_node.data < value):
+                current.next_node.data < value):
             current = current.next_node
 
         new_node.next_node = current.next_node
