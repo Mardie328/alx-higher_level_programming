@@ -12,7 +12,7 @@ def from_json_string(my_str):
 
     Args:
         my_str: A JSON string
-    
-    Returns: Python data structure 
+
+    Returns: Python data structure
     """
     return json.loads(my_str)
