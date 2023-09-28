@@ -12,64 +12,64 @@ from 0_add_integer import add_integer
 
 Test to realize:
 
-add_integer(4, 8)
+>>> add_integer(4, 8)
 12
 
-add_integer(4, -8)
+>>> add_integer(4, -8)
 -4
 
-add_integer(-4, 8)
+>>> add_integer(-4, 8)
 4
 
-add_integer(-3.5, 1)
+>>> add_integer(-3.5, 1)
 -2
 
-add_integer(-4, 8)
+>>> add_integer(-4, 8)
 4
 
-add_integer(-4, -8)
+>>> add_integer(-4, -8)
 -12
 
-add_integer(4)
+>>> add_integer(4)
 102
 
-add_integer(-8)
+>>> add_integer(-8)
 90
 
-add_integer()
+>>> add_integer()
 Traceback (most recent call last):
     ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
 
-add_integer([5, 8, 9], 5)
+>>> add_integer([5, 8, 9], 5)
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
 
-add_integer(5, [5, 8, 9])
+>>> add_integer(5, [5, 8, 9])
 Traceback (most recent call last):
     ...
 TypeError: b must be an integer
 
-add_integer([5, 8, 9], -5)
+>>> add_integer([5, 8, 9], -5)
 Traceback (most recent call last):
     ...
 TypeError: a must be an integer
 
-add_integer(-5, [5, 8, 9])
+>>> add_integer(-5, [5, 8, 9])
 Traceback (most recent call last):
     ...
 TypeError: b must be an integer
 
-add_integer(5.6, 1.4)
+>>> add_integer(5.6, 1.4)
 6
 
-add_integer(319e520)
+>>> add_integer(319e520)
 Traceback (most recent call last):
     ...
 OverflowError: cannot convert float infinity to integer
 
-add_integer(float('nan'))
+>>> add_integer(float('nan'))
 Traceback (most recent call last):
     ...
 ValueError: cannot convert float NaN to integer
