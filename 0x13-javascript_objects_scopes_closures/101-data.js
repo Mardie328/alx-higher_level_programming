@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 exports.dict = {
   89: 1,
   90: 2,
