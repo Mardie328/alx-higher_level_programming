@@ -1,5 +1,3 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 
-class Rectangle {
-	"""An empty class that defines a rectangle"""
-};
+module.exports = class Rectangle {};
